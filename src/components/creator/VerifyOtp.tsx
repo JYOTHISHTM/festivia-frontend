@@ -8,7 +8,7 @@ const VerifyOtp: React.FC = () => {
   const [timer, setTimer] = useState(30);
   const [resendDisabled, setResendDisabled] = useState(true);
   const [otpExpired, setOtpExpired] = useState(false);
-  const intervalRef = useRef<number | null>(null);
+const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
 
   const navigate = useNavigate();
