@@ -2,7 +2,7 @@
 
 // //src/config//config.ts
 // export const BASE_URL = 'http://localhost:5001';
-export const BASE_URL = 'https://festivia-api.jothish.online'
+export const BASE_URL = 'http://festivia-api.jothish.online'
 const MAINTENANCE_MODE = false;
 
 
