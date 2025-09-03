@@ -1,50 +1,97 @@
-# React + TypeScript + Vite
+﻿# 🎉 FESTIVIA - Event Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Note:** This project is currently under active development. Features and documentation will be updated as development progresses.
 
-Currently, two official plugins are available:
+FESTIVIA is a full-stack event management and ticketing platform for **Users**, **Event Creators**, and **Admins**. The platform will enable creators to host events, users to book tickets, and admins to manage the overall system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+Festivia/
+├── BACKEND/        # Node.js + TypeScript + MongoDB
+│   └── src/        # Source files
+├── FRONTEND/       # Frontend implementation
+│   └── src/        # Frontend source files
+└── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Planned Features
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Admin Panel
+- Dashboard with analytics
+- Event and creator management
+- Subscription plan management
+- Financial tracking
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Event Creators
+- Creator application process
+- Event creation and management
+- Earnings dashboard
+- Communication with users
+
+### Users
+- Authentication options
+- Event discovery and booking
+- Personal event creation
+- Profile management
+
+## 🛠️ Tech Stack
+
+- **Backend:** Node.js, Express, TypeScript, MongoDB
+- **Frontend:** Vite + React/Vue, TailwindCSS
+- **Services:** Cloudinary, Nodemailer, Razorpay
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/festivia.git
+cd festivia
 ```
+
+### 2. Install dependencies
+
+```bash
+# Backend
+cd BACKEND
+npm install
+
+# Frontend
+cd ../FRONTEND
+npm install
+```
+
+### 3. Environment Variables
+
+Create a `.env` file in the `BACKEND/` directory with:
+
+```env
+MONGO_URI=mongodb://localhost:27017/your_db_name
+EMAIL_USER=your_email_address
+EMAIL_PASS=your_email_app_password
+CLOUDINARY_CLOUD_NAME=cloudinary_name
+CLOUDINARY_API_KEY=cloudinary_api_key
+CLOUDINARY_API_SECRET=cloudinary_api_secret
+JWT_SECRET=jwt_secret
+JWT_REFRESH_SECRET=jwt_refresh_secret
+GOOGLE_CLIENT_ID=google_client_id
+GOOGLE_CLIENT_SECRET=google_client_secret
+GOOGLE_CALLBACK_URL=google_callback_url
+FRONTEND_URL=http://localhost:3030
+```
+
+### 4. Running the App
+
+```bash
+# Backend
+cd BACKEND
+npm run dev
+
+# Frontend
+cd FRONTEND
+npm run dev
+```
+
+
+Developed by **Jothish T M**
