@@ -122,7 +122,7 @@ function LandingPage() {
                 </p>
               </div>
               <h1 className="text-5xl sm:text-7xl font-bold mb-8">
-                {'Create Magic'.split('').map((letter, index) => (
+                {'Create Magics'.split('').map((letter, index) => (
                   <span
                     key={index}
                     className="inline-block hover:text-green-600 hover:scale-120 transition-all duration-200"
